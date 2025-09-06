@@ -14,6 +14,7 @@ export default function Links() {
 
             <a href="https://discord.gg/GTR9Q3XR" target="_blank" rel="noopener noreferrer" className="hover:underline">discord</a>
             <a href="https://github.com/SDxUCSD" target="_blank" rel="noopener noreferrer" className="hover:underline">github</a>
+            <a href="https://luma.com/sdx-uc-san-diego" target="_blank" rel="noopener noreferrer" className="hover:underline">lu.ma</a>
         </div>
     );
 }
