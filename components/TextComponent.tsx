@@ -174,6 +174,7 @@ export default function TextComponent() {
   const [animState, setAnimState] = useState<AnimationState | null>(null);
   const [shouldBreak, setShouldBreak] = useState(false);
   const [fontSize, setFontSize] = useState(80);
+  // @ts-ignore
   const animationRef = useRef<number>();
 
   useEffect(() => {
