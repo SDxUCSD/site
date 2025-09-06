@@ -14,7 +14,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "SDxUCSD - Builder Community",
-  description: "The community for technologists, creatives, and builders at UCSD",
+  description:
+    "The community for technologists, creatives, and builders at UCSD",
 };
 
 export default function RootLayout({
