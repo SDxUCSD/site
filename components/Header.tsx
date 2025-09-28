@@ -32,14 +32,17 @@ export default function Header() {
         )}
 
         <nav className="flex gap-3 sm:gap-6 text-xs sm:text-sm">
-          <Link href="/manifesto" className="hover:underline transition-all">
-            manifesto
-          </Link>
-          <Link href="/builders" className="hover:underline transition-all">
-            builders
+          <Link href="/portfolio" className="hover:underline transition-all">
+            portfolio
           </Link>
           <Link href="/events" className="hover:underline transition-all">
             events
+          </Link>
+          <Link href="/gallery" className="hover:underline transition-all">
+            gallery
+          </Link>
+          <Link href="/about" className="hover:underline transition-all">
+            about
           </Link>
         </nav>
       </div>

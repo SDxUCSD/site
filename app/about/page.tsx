@@ -6,7 +6,7 @@ const spaceMono = Space_Mono({
   weight: ["400", "700"],
 });
 
-export default function ManifestoPage() {
+export default function AboutPage() {
   return (
     <div className="min-h-screen bg-zinc-900 text-white">
       <Header />
@@ -44,7 +44,7 @@ checj out the <a href="https://sdxucsd.com" className="text-blue-500">website</a
 
           <p>
 
-Any UCSD students interested in technology. only requirement is that you're actively building something. Can be anything - a side project, a small business, an organization, a startup. 
+Any UCSD students interested in technology. only requirement is that you're actively building something. Can be anything - a side project, a small business, an organization, a startup.
        </p>
         </div>
       </div>
