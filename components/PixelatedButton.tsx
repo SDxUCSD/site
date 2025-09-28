@@ -11,9 +11,9 @@ const spaceMono = Space_Mono({
 
 // Grid configuration
 const BLOCK_SIZE = 12; // Size of each block in pixels
-const BUTTON_WIDTH = 200;
+const BUTTON_WIDTH = 180;
 const BUTTON_HEIGHT = 60;
-const ANIMATION_DURATION = 600; // Total animation duration in ms
+const ANIMATION_DURATION = 300; // Total animation duration in ms
 
 interface Block {
   id: number;
@@ -52,7 +52,7 @@ export default function PixelatedButton() {
   return (
     <Link
       href="/events"
-      className={`relative overflow-hidden bg-black font-bold text-lg border-2 border-black ${spaceMono.className}`}
+      className={`relative overflow-hidden bg-black font-bold text-lg ${spaceMono.className}`}
       style={{
         width: `${BUTTON_WIDTH}px`,
         height: `${BUTTON_HEIGHT}px`,

@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "SDx@UCSD - Builder Community",
+  title: "SDxUCSD - UCSD's Builder Community",
   description:
-    "The community for technologists, creatives, and builders at UCSD",
+    "SDxUCSD (SDx@UCSD) is The community for technologists, creatives, startup founders, and builders at UCSD. ",
 };
 
 export default function RootLayout({
