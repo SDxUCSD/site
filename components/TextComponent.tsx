@@ -195,6 +195,7 @@ export default function TextComponent() {
   const [animState, setAnimState] = useState<AnimationState | null>(null);
   const [shouldBreak, setShouldBreak] = useState(false);
   const [fontSize, setFontSize] = useState(80);
+  const [useSimpleText, setUseSimpleText] = useState(false);
   // @ts-expect-error
   const animationRef = useRef<number>();
 
@@ -202,6 +203,9 @@ export default function TextComponent() {
     const checkScreenWidth = () => {
       const width = window.innerWidth;
       setShouldBreak(width < 1200);
+
+      // Use simple text for very small screens
+      setUseSimpleText(width < 400);
 
       // Progressive scaling for smaller screens
       if (width < 600) {
@@ -236,6 +240,8 @@ export default function TextComponent() {
   );
 
   useEffect(() => {
+    if (useSimpleText) return;
+
     let alive = true;
     rasterToAscii(opts).then(({ grid, dimensions }) => {
       if (alive && grid.length > 0) {
@@ -253,10 +259,10 @@ export default function TextComponent() {
     return () => {
       alive = false;
     };
-  }, [opts]);
+  }, [opts, useSimpleText]);
 
   useEffect(() => {
-    if (!animState?.baseGrid) return;
+    if (!animState?.baseGrid || useSimpleText) return;
 
     const animate = () => {
       setAnimState((prev) => (prev ? updateAnimation(prev) : null));
@@ -270,13 +276,32 @@ export default function TextComponent() {
         cancelAnimationFrame(animationRef.current);
       }
     };
-  }, [animState?.baseGrid]);
+  }, [animState?.baseGrid, useSimpleText]);
 
   const renderGrid = () => {
     if (!animState?.displayGrid) return "";
 
     return animState.displayGrid.map((row) => row.join("")).join("\n");
   };
+
+  // Simple text fallback for very small screens
+  if (useSimpleText) {
+    return (
+      <div className="text-white select-none cursor-default">
+        <h1
+          className={`${spaceMono.className} font-bold text-3xl`}
+        >
+          {shouldBreak ? (
+            <>
+              SDx<br />UCSD
+            </>
+          ) : (
+            "SDxUCSD"
+          )}
+        </h1>
+      </div>
+    );
+  }
 
   return (
     <div className="text-white select-none cursor-default">

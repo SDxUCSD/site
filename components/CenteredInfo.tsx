@@ -10,20 +10,20 @@ export default function CenteredInfo() {
     <div
       className={`flex flex-col items-center gap-8 text-white ${spaceMono.className}`}
     >
-      <div className="text-center">
-        <p className="text-lg font-bold mb-2">the community for technologists, creatives, and builders at UCSD</p>
+      <div className="text-center px-4">
+        <p className="text-sm sm:text-base md:text-lg font-bold mb-2">the community for technologists, creatives, and builders at UCSD</p>
         {/* <p className="text-base">
           the community for technologists, creatives, and builders at UCSD
           <br />
         </p> */}
       </div>
 
-      <div className="flex gap-6 text-sm">
+      <div className="flex flex-wrap justify-center gap-4 sm:gap-6 text-xs sm:text-sm px-4">
         <a
           href="https://www.instagram.com/sdxucsd/"
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:underline transition-all hover:scale-110"
+          className="hover:underline transition-all"
         >
           instagram
         </a>
@@ -31,7 +31,7 @@ export default function CenteredInfo() {
           href="https://www.linkedin.com/company/104974111"
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:underline transition-all hover:scale-110"
+          className="hover:underline transition-all"
         >
           linkedin
         </a>
@@ -39,7 +39,7 @@ export default function CenteredInfo() {
           href="https://discord.gg/GTR9Q3XR"
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:underline transition-all hover:scale-110"
+          className="hover:underline transition-all"
         >
           discord
         </a>
@@ -47,7 +47,7 @@ export default function CenteredInfo() {
           href="https://github.com/SDxUCSD"
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:underline transition-all hover:scale-110"
+          className="hover:underline transition-all"
         >
           github
         </a>
@@ -55,7 +55,7 @@ export default function CenteredInfo() {
           href="https://luma.com/sdx-uc-san-diego"
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:underline transition-all hover:scale-110"
+          className="hover:underline transition-all"
         >
           lu.ma
         </a>
