@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inversion Hover Button</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #f0f0f0;
+    }
+
+    .btn {
+      position: relative;
+      display: inline-block;
+      padding: 20px 40px;
+      font-family: monospace;
+      font-size: 24px;
+      font-weight: bold;
+      color: black;
+      border: 2px solid black;
+      background: white;
+      cursor: pointer;
+      overflow: hidden;
+      transition: color 0.3s, background 0.3s;
+    }
+
+    /* Grid overlay for the inversion blocks */
+    .btn::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: grid;
+      grid-template-columns: repeat(8, 1fr); /* change 8 for more/less tiles */
+      grid-template-rows: repeat(3, 1fr);
+      pointer-events: none;
+    }
+
+    .btn span {
+      position: relative;
+      z-index: 1; /* keep text above */
+    }
+
+    .btn::before div {
+      background: transparent;
+      mix-blend-mode: difference; /* the magic: inverts underlying colors */
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+
+    /* Create subblocks dynamically with CSS counters */
+    .btn::before {
+      counter-reset: tiles;
+    }
+    .btn::before {
+      display: grid;
+    }
+    .btn::before div:nth-child(n) {
+      counter-increment: tiles;
+    }
+
+    /* Hover: turn on inversion tiles */
+    .btn:hover::before div {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <button class="btn">
+    <span>VIEW EVENTS</span>
+    <!-- Subblocks manually added (could also be generated in JS) -->
+    <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+    <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+    <div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+  </button>
+</body>
+</html>
