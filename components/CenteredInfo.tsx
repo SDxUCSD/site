@@ -1,5 +1,5 @@
 import { Space_Mono } from "next/font/google";
-import { InstagramIcon, LinkedInIcon, DiscordIcon, GitHubIcon, EmailIcon } from "./SocialIcons";
+import { InstagramIcon, LinkedInIcon, DiscordIcon, GitHubIcon, EmailIcon, XIcon } from "./SocialIcons";
 import PixelatedButton from "./PixelatedButton";
 
 const spaceMono = Space_Mono({
@@ -55,6 +55,15 @@ export default function CenteredInfo() {
           aria-label="LinkedIn"
         >
           <LinkedInIcon className="w-6 h-6" />
+        </a>
+        <a
+          href="https://www.x.com/sdxucsd"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-white hover:text-zinc-300 transition-colors "
+          aria-label="X"
+        >
+          <XIcon className="w-6 h-6" />
         </a>
   
         <a

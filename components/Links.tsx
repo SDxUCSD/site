@@ -19,6 +19,14 @@ export default function Links() {
         instagram
       </a>
       <a
+        href="https://x.com/sdxucsd"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="hover:underline"
+      >
+        x
+      </a>
+      <a
         href="https://www.linkedin.com/company/104974111"
         target="_blank"
         rel="noopener noreferrer"
