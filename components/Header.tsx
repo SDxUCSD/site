@@ -37,7 +37,7 @@ export default function Header() {
         </div>
 
         <nav className="flex gap-3 sm:gap-6 text-xs sm:text-sm">
-   
+
    <Link href="/gallery" className={`hover:underline transition-all ${pathname === '/gallery' ? 'underline' : ''}`}>
      gallery
    </Link>
@@ -45,6 +45,11 @@ export default function Header() {
    <Link href="/projects" className={`hover:underline transition-all ${pathname === '/projects' ? 'underline' : ''}`}>
      projects
    </Link>
+
+   <Link href="/hackers" className={`hover:underline transition-all ${pathname === '/hackers' ? 'underline' : ''}`}>
+     hackers
+   </Link>
+
    <span className="flex items-center gap-1">
    <a href="https://luma.com/sdx-uc-san-diego?" target="_blank" rel="noopener noreferrer" className="hover:underline transition-all">
      events
