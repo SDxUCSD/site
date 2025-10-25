@@ -30,7 +30,7 @@ export default function CenteredInfo() {
       <div className="flex justify-center gap-6 px-4">
         
       <a
-          href="https://discord.gg/GTR9Q3XR"
+          href="https://discord.gg/PR335gDb"
           target="_blank"
           rel="noopener noreferrer"
           className="text-white hover:text-zinc-300 transition-colors "
