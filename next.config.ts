@@ -1,7 +1,20 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  trailingSlash: false,
+  generateEtags: false,
+  poweredByHeader: false,
+  compress: true,
+  images: {
+    formats: ['image/webp', 'image/avif'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '*',
+        pathname: '*',
+      },
+    ],
+  },
 };
 
 export default nextConfig;

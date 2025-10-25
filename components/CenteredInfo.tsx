@@ -17,10 +17,10 @@ export default function CenteredInfo() {
           the home for UCSD's most ambitious hackers, founders, and creators.
         </p>
         <p className="text-sm sm:text-base md:text-lg max-w-4xl mt-6">
-          We host regular hack-days and co-working sessions, hold talks with startup founders and VCs, and provide access to other students building on the forefront of AI. Any UCSD student interested in technology is welcome to join.
+          SDX UCSD hosts regular hack-days and co-working sessions, holds talks with startup founders and VCs, and provides access to other students building on the forefront of AI. Any UCSD student interested in technology is welcome to join our community.
         </p>
         <p className="text-sm sm:text-base md:text-lg max-w-4xl mt-6">
-          SDx @ UCSD is a chapter of the broader <a href="https://sdx.community" className="underline hover:text-zinc-300 transition-colors">SDx community</a>, a network of students and professionals dedicated to building the future of technology.
+          SDX UCSD is a chapter of the broader <a href="https://sdx.community" className="underline hover:text-zinc-300 transition-colors">SDx community</a>, a network of students and professionals dedicated to building the future of technology at UC San Diego.
         </p>
       </div>
       <div className="flex flex-row gap-4">
