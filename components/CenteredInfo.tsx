@@ -29,15 +29,7 @@ export default function CenteredInfo() {
       </div>
       <div className="flex justify-center gap-6 px-4">
         
-      <a
-          href="https://discord.gg/PR335gDb"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-white hover:text-zinc-300 transition-colors "
-          aria-label="Discord"
-        >
-          <DiscordIcon className="w-7 h-7" />
-        </a>
+    
         <a
           href="https://www.instagram.com/sdxucsd/"
           target="_blank"
